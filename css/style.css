@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --primary-color: rgb(30, 214, 136);
+    --secundary-color: rgb(42, 63, 202);
+    --color1: rgb(78, 201, 150);
+    --color2: rgba(30, 214, 137, 0.849);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color1) ;
+}
+
+.container {
+    width: 68%;
+    height: 87vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+}
+
+.form-image {
+    width: 450px;
+    height: 609px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image img {
+    width: 450px;
+    height: 609px;
+}
+
+.form {
+    width: 705px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+
+.form-header .form-header-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: var(--primary-color);
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: var(--color2);
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    position: absolute;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+    flex-direction: column;
+    
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+}
+
+.input-column {
+    margin-right: 50px;
+}
+
+.input-column select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 9px;
+    outline-style: auto;
+    outline-color: var(--secundary-color);
+
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+
+.input-box select {
+    background: no-repeat white;
+    background-position: 205px center;
+    width: 270px;
+    height: 30px;
+    color: #000000be;
+    text-indent: 0.01px;
+    text-overflow: "";
+    outline-style: auto;
+    outline-color: var(--secundary-color);
+}
+
+p {
+    font-size: 13px;
+    text-align: left;
+}
+
+.continue-button button {
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: var(--primary-color);
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button {
+    margin: 20px;
+}
+
+.continue-button button:hover {
+    background-color:var(--color2);
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color:white;
+}
+
+@media screen and (max-width: 1330px){
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px){
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}
+
